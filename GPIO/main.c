@@ -1,4 +1,5 @@
 #include <LPC21xx.H>
+#define LED0_bm 0x00010000
 
 
 void Delay(unsigned int uiMiliseconds) 
@@ -15,13 +16,13 @@ void Delay(unsigned int uiMiliseconds)
 
 int main()
 {
-    IO1DIR = 0x00010000;
+    IO1DIR = LED0_bm;
 
     while(1)
         {
-        IO1SET = 0x00010000;
+        IO1SET = LED0_bm;
         Delay(50);
-        IO1CLR = 0x00010000;
+        IO1CLR = LED0_bm;
         Delay(50);
     }
 }
