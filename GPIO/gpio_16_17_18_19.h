@@ -2,9 +2,11 @@
 #define gpio_16_17_18_19_h
 
 
-enum ButtonState {RELEASED, PRESSED};
+enum KeyboardState {RELEASED, BUTTON_0, BUTTON_1, BUTTON_2, BUTTON_3};
 
-enum ButtonState ReadButton1(void);
+enum KeyboardState eKeyboardRead(void);
+
+void KeyboardInit(void);
 
 
 #endif

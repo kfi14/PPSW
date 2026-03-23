@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\gpio.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\gpio.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Mar 23 14:04:26 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Mar 23 15:00:34 2026
 <BR><P>
 <H3>Maximum Stack Usage =          8 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -176,8 +176,8 @@ Global Symbols
 
 <P><STRONG><a name="[41]"></a>Delay</STRONG> (ARM, 48 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 
-<P><STRONG><a name="[a]"></a>main</STRONG> (ARM, 68 bytes, Stack size 0 bytes, main.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadButton1
+<P><STRONG><a name="[a]"></a>main</STRONG> (ARM, 136 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eKeyboardRead
 <LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LedOn
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LedInit
 <LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyboardInit
@@ -192,7 +192,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[1b]"></a>ReadButton1</STRONG> (ARM, 32 bytes, Stack size 0 bytes, gpio_16_17_18_19.o(.text))
+<P><STRONG><a name="[1b]"></a>eKeyboardRead</STRONG> (ARM, 104 bytes, Stack size 0 bytes, gpio_16_17_18_19.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 

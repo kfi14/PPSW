@@ -25,13 +25,26 @@ int main()
 	
 					while(1)
 					{
-						switch(ReadButton1()){							
-							case PRESSED:
+						switch(eKeyboardRead()){							
+							
+							case BUTTON_0:
+								LedOn(0);
+							break;
+							
+							case BUTTON_1:
 								LedOn(1);
 							break;
 							
+							case BUTTON_2:
+								LedOn(2);
+							break;
+							
+							case BUTTON_3:
+								LedOn(3);
+							break;
+							
 							case RELEASED:
-								LedOn(0);
+								LedOn(4);
 							break;
 						}
 							
