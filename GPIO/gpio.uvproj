@@ -403,34 +403,24 @@
               <FilePath>.\main.c</FilePath>
             </File>
             <File>
-              <FileName>gpio_13_14_15.c</FileName>
+              <FileName>led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\gpio_13_14_15.c</FilePath>
+              <FilePath>.\led.c</FilePath>
             </File>
             <File>
-              <FileName>gpio_13_14_15.h</FileName>
+              <FileName>led.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\gpio_13_14_15.h</FilePath>
+              <FilePath>.\led.h</FilePath>
             </File>
             <File>
-              <FileName>gpio_16_17_18_19.c</FileName>
+              <FileName>keyboard.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\gpio_16_17_18_19.c</FilePath>
+              <FilePath>.\keyboard.c</FilePath>
             </File>
             <File>
-              <FileName>gpio_16_17_18_19.h</FileName>
+              <FileName>keyboard.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\gpio_16_17_18_19.h</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_20-25.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\gpio_20-25.c</FilePath>
-            </File>
-            <File>
-              <FileName>gpio_20-25.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\gpio_20-25.h</FilePath>
+              <FilePath>.\keyboard.h</FilePath>
             </File>
           </Files>
         </Group>
