@@ -3,7 +3,7 @@
 
 
 void LedInit(void);
-void LedOn(unsigned char ucLedIndeks)
+void LedOn(unsigned char ucLedIndeks);
 
 
 #endif
