@@ -402,6 +402,26 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>gpio_13_14_15.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gpio_13_14_15.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_13_14_15.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gpio_13_14_15.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_16_17_18_19.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\gpio_16_17_18_19.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_16_17_18_19.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\gpio_16_17_18_19.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
