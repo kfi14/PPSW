@@ -21,18 +21,23 @@ void Delay(unsigned int uiMiliseconds)
 
 int main()
 {
-					unsigned int uiLedStepCounter;
 					LedInit();
+					KeyboardInit();
 	
 					while(1)
 					{
-						for (uiLedStepCounter = 0; uiLedStepCounter < 9; uiLedStepCounter++){
-							Delay(250);
-							LedStep(LEFT);				
-						}		
-						for (uiLedStepCounter = 0; uiLedStepCounter < 9; uiLedStepCounter++){
-							Delay(250);
+						switch(eKeyboardRead()){
+						
+						case BUTTON_1:
 							LedStep(RIGHT);
-						}
+						break;
+						
+						case BUTTON_2:
+							LedStep(LEFT);
+						break;
+						
+						case RELEASED:
+						break;
+						}					
 					}
 }
