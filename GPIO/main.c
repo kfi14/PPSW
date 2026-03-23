@@ -29,14 +29,14 @@ int main()
 						switch(eKeyboardRead()){
 						
 						case BUTTON_1:
-							LedStep(RIGHT);
+							LedStepRight();
 						break;
 						
 						case BUTTON_2:
-							LedStep(LEFT);
+							LedStepLeft();
 						break;
 						
-						case RELEASED:
+						default:
 						break;
 						}					
 					}

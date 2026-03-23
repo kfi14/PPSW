@@ -28,6 +28,14 @@ void LedStep(enum eLedStepDirection Direction){
 	
 	LedOn(suiLedTracker);
 }
+
+void LedStepLeft(void){
+	LedStep(LEFT);
+}
+
+void LedStepRight(void){
+	LedStep(RIGHT);
+}
 		
 		
 	
