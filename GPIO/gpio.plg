@@ -76,3 +76,91 @@ linking...
 Program Size: Code=1080 RO-data=32 RW-data=4 ZI-data=1260  
 FromELF: creating hex file...
 ".\gpio.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(28): error:  #29: expected an expression
+main.c(28): error:  #20: identifier "uiLedStepCounter" is undefined
+main.c(31): error:  #29: expected an expression
+main.c(35): warning:  #1-D: last line of file ends without a newline
+compiling gpio_20-25.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.c(12): warning:  #1294-D: Old-style function LedStep
+gpio_20-25.c(34): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 3 Errors, 6 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(28): error:  #29: expected an expression
+main.c(28): error:  #20: identifier "uiLedStepCounter" is undefined
+main.c(31): error:  #29: expected an expression
+main.c(35): warning:  #1-D: last line of file ends without a newline
+compiling gpio_20-25.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.c(34): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 3 Errors, 5 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(29): error:  #29: expected an expression
+main.c(33): error:  #29: expected an expression
+main.c(38): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 2 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(29): error:  #29: expected an expression
+main.c(33): error:  #29: expected an expression
+main.c(38): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 2 Errors, 3 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(38): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1160 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1144 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+compiling gpio_20-25.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.c(34): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1144 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(38): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1160 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+compiling gpio_20-25.c...
+gpio_13_14_15.h(3): warning:  #1-D: last line of file ends without a newline
+gpio_20-25.c(37): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1160 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).

@@ -6,24 +6,27 @@
 #define LED2_bm 0x00040000
 #define LED3_bm 0x00080000
 
-unsigned int uiLedTracker = 0;
+
+
 enum eLedStepDirection {LEFT, RIGHT};
 
 void LedStep(enum eLedStepDirection Direction){
 	
+	static unsigned int suiLedTracker = 0;
+	
 	if(Direction == LEFT){
-		uiLedTracker = (uiLedTracker+1)%4;
+		suiLedTracker = (suiLedTracker+1)%4;
 	}
 	
 	else if(Direction == RIGHT){
-		uiLedTracker = (uiLedTracker-1)%4;
+		suiLedTracker = (suiLedTracker-1)%4;
 	}
 	
 	else{
 		return;
 	}
 	
-	LedOn(uiLedTracker);
+	LedOn(suiLedTracker);
 }
 		
 		
