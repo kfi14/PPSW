@@ -16,7 +16,6 @@ void Delay(unsigned int uiMiliseconds)
     }
 }
 
-
 int main()
 {
 					LedInit();
