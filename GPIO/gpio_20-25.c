@@ -7,17 +7,28 @@
 #define LED3_bm 0x00080000
 
 unsigned int uiLedTracker = 0;
+enum eLedStepDirection {LEFT, RIGHT};
 
-void StepLeft(void){
-	uiLedTracker = (uiLedTracker+1)%4;
+void LedStep(enum eLedStepDirection Direction){
+	
+	if(Direction == LEFT){
+		uiLedTracker = (uiLedTracker+1)%4;
+	}
+	
+	else if(Direction == RIGHT){
+		uiLedTracker = (uiLedTracker-1)%4;
+	}
+	
+	else{
+		return;
+	}
+	
 	LedOn(uiLedTracker);
 }
-
-void StepRight(void){
-	uiLedTracker = (uiLedTracker-1)%4;
-	LedOn(uiLedTracker);
-}
-
+		
+		
+	
+	
 	
 	
 	

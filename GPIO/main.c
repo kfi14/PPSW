@@ -21,11 +21,18 @@ void Delay(unsigned int uiMiliseconds)
 
 int main()
 {
+					unsigned int uiLedStepCounter;
 					LedInit();
 	
 					while(1)
 					{
-						Delay(250);
-						StepRight();												
-					}						
+						for (uiLedStepCounter = 0; uiLedStepCounter < 9; uiLedStepCounter++){
+							Delay(250);
+							LedStep(LEFT);				
+						}		
+						for (uiLedStepCounter = 0; uiLedStepCounter < 9; uiLedStepCounter++){
+							Delay(250);
+							LedStep(RIGHT);
+						}
+					}
 }

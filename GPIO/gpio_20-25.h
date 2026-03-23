@@ -1,4 +1,3 @@
 
-void StepLeft(void);
-
-void StepRight(void);
+enum eLedStepDirection {LEFT, RIGHT};
+void LedStep(enum eLedStepDirection Direction);
