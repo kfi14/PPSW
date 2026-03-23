@@ -16,22 +16,20 @@ void Delay(unsigned int uiMiliseconds)
     }
 }
 
+
 int main()
 {
 					LedInit();
 	
 					while(1)
 					{
-						Delay(250);
-						LedOn(0);
-						
-						Delay(250);
-						LedOn(1);
-						
-						Delay(250);
-						LedOn(2);
-						
-						Delay(250);
-						LedOn(3);
+						if(ReadButton1() == 1){
+							LedOn(1);
+						}
+						else{
+							LedOn(0);
+						}
+							
+							
 					}						
 }
