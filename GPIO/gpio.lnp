@@ -1,9 +1,8 @@
 --cpu ARM7TDMI
 ".\startup.o"
 ".\main.o"
-".\gpio_13_14_15.o"
-".\gpio_16_17_18_19.o"
-".\gpio_20-25.o"
+".\led.o"
+".\keyboard.o"
 --strict --scatter ".\gpio.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

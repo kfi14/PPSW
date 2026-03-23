@@ -1,8 +1,5 @@
-#include <LPC21xx.H>
-
-#include "gpio_16_17_18_19.h"
-#include "gpio_13_14_15.h"
-#include "gpio_20-25.h"
+#include "led.h"
+#include "keyboard.h"
 
 
 
