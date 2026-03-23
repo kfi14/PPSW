@@ -20,7 +20,7 @@ void LedOn(unsigned char ucLedIndeks){
 		
 		case(0):
 			IO1SET = LED0_bm;
-			break;
+		break;
 		
 		case(1):
 			IO1SET = LED1_bm;
@@ -28,13 +28,13 @@ void LedOn(unsigned char ucLedIndeks){
 		
 		case(2):
 			IO1SET = LED2_bm;
-			break;
+		break;
 		
 		case(3):
 			IO1SET = LED3_bm;
-			break;
+		break;
 		
 		default:
-			break;
+		break;
 	}
 }

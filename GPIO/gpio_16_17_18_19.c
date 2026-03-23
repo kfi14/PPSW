@@ -1,13 +1,15 @@
 #include <LPC21xx.H>
 #define S0_bm 0x00000010
 
-char ReadButton1(void){
+enum ButtonState {RELEASED, PRESSED};
+
+enum ButtonState ReadButton1(void){
 	
 	if((IO0PIN & S0_bm) == 0){
-		return 1;
+		return PRESSED;
 	}
 	else {
-		return 0;
+		return RELEASED;
 	}	
 }
 
