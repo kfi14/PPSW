@@ -18,8 +18,8 @@ void Delay(unsigned int uiMiliseconds)
 
 int main(void){
 	
-			enum LedState{LED_LEFT, LED_RIGHT};
-			enum LedState eLedState = LED_LEFT;
+			enum LedState{LED_MOVING_LEFT, LED_MOVING_RIGHT};
+			enum LedState eLedState = LED_MOVING_LEFT;
 			unsigned int uiLed_Step_Tracker = 0;
 			LedInit();
 
@@ -27,31 +27,30 @@ int main(void){
 				
 				switch(eLedState){
 					
-					case LED_LEFT:
+					case LED_MOVING_LEFT:
 						
-						if((uiLed_Step_Tracker%5) < 3){
+						if((uiLed_Step_Tracker%6) < 3){
 							LedStepLeft();
 							uiLed_Step_Tracker++;
-							break;
+							goto delay;
 						}
 						else{
-							eLedState = LED_RIGHT;
-							break;
+							eLedState = LED_MOVING_RIGHT;
 						}
 					
 						
-					case LED_RIGHT:
+					case LED_MOVING_RIGHT:
 						
-					if((uiLed_Step_Tracker%5) >= 3){
+					if((uiLed_Step_Tracker%6) >= 3){
 						LedStepRight();
 						uiLed_Step_Tracker++;
-						break;
+						goto delay;
 					}
 					else{
-						eLedState = LED_LEFT;
+						eLedState = LED_MOVING_LEFT;
 					}
-						
-					Delay(250);
+					delay:
+						Delay(250);
 			}	
 		}
 }
