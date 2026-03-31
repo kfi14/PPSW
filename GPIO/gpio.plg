@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\kubaficer\Desktop\PPSW\GPIO\gpio.uvproj
+Project File Date:  03/31/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+keyboard.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(63): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1372 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+keyboard.h(3): warning:  #1-D: last line of file ends without a newline
+main.c(58): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1384 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).

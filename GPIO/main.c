@@ -19,9 +19,7 @@ void Delay(unsigned int uiMiliseconds)
 int main(void){
 	
 			enum LedState{LED_MOVING, LED_STOPPED};
-			enum LedState eLedState = LED_STOPPED;
-
-			unsigned int uiLed_Step_Tracker = 0;
+			enum LedState eLedState = LED_MOVING;
 
 			LedInit();
 			KeyboardInit();
@@ -32,7 +30,7 @@ int main(void){
 					
 					case LED_STOPPED:
 						
-						if(eKeyboardRead() == BUTTON_0 ){
+						if(eKeyboardRead() == BUTTON_1 ){
 							eLedState = LED_MOVING;
 						}
 						
@@ -44,16 +42,13 @@ int main(void){
 						
 					case LED_MOVING:
 						
-						if(uiLed_Step_Tracker < 2){
-							LedStepRight();
-							uiLed_Step_Tracker++;
-							eLedState = LED_MOVING;
+						if(eKeyboardRead() == BUTTON_0){
+							eLedState = LED_STOPPED;
 						}
 						
 						else{
 							LedStepRight();
-							uiLed_Step_Tracker = 0;
-							eLedState = LED_STOPPED;
+							eLedState = LED_MOVING;
 						}
 						
 					break;						
