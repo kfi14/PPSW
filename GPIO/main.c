@@ -29,28 +29,36 @@ int main(void){
 					
 					case LED_MOVING_LEFT:
 						
-						if((uiLed_Step_Tracker%6) < 3){
+						if(uiLed_Step_Tracker < 2){
 							LedStepLeft();
 							uiLed_Step_Tracker++;
-							goto delay;
+							eLedState = LED_MOVING_LEFT;
 						}
+						
 						else{
+							LedStepLeft();
+							uiLed_Step_Tracker = 0;
 							eLedState = LED_MOVING_RIGHT;
 						}
-					
 						
+						break;
+								
 					case LED_MOVING_RIGHT:
 						
-					if((uiLed_Step_Tracker%6) >= 3){
-						LedStepRight();
-						uiLed_Step_Tracker++;
-						goto delay;
-					}
-					else{
-						eLedState = LED_MOVING_LEFT;
-					}
-					delay:
-						Delay(250);
-			}	
+						if(uiLed_Step_Tracker < 2){
+							LedStepRight();
+							uiLed_Step_Tracker++;
+							eLedState = LED_MOVING_RIGHT;
+						}	
+						
+						else{
+							LedStepRight();
+							uiLed_Step_Tracker = 0;
+							eLedState = LED_MOVING_LEFT;
+						}
+						
+						break;
+			}		
+			Delay(250);
 		}
 }
