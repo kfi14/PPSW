@@ -398,11 +398,6 @@
               <FilePath>.\Startup.s</FilePath>
             </File>
             <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\led.c</FilePath>
@@ -421,6 +416,11 @@
               <FileName>keyboard.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\keyboard.h</FilePath>
+            </File>
+            <File>
+              <FileName>Timer1Interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Timer1Interrupts.c</FilePath>
             </File>
           </Files>
         </Group>
