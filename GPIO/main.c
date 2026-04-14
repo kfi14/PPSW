@@ -12,13 +12,17 @@
 
 #define mIRQ_SLOT_ENABLE 0x00000020
 
+void(*ptrTimer0InterruptFunction)(void);
+
 __irq void Timer0IRQHandler() {
     T0IR = mMR0_INTERRUPT; 	
-    Led_StepRight();		
+    ptrTimer0InterruptFunction();		
     VICVectAddr = 0x00; 	
 }
 
-void Timer0Interrupts_Init(unsigned int uiPeriod) { 
+void Timer0InterruptsInit(unsigned int uiPeriod, *ptrInterruptFunction) { 
+		ptrTimer0InterruptFunction = ptrInterruptFunction;
+	
     VICIntEnable |= (0x1 << VIC_TIMER0_CHANNEL_NR);            
     VICVectCntl0  = mIRQ_SLOT_ENABLE | VIC_TIMER0_CHANNEL_NR;  
     VICVectAddr0  = (unsigned long)Timer0IRQHandler; 	   
