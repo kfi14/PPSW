@@ -7,11 +7,8 @@ void Automat(void){
 			enum LedState{LED_MOVING_LEFT, LED_MOVING_RIGHT, LED_STOPPED};
 			enum LedState eLedState = LED_STOPPED;
 
-			LedInit();
-			KeyboardInit();
 
-			while(1){
-				
+
 				switch(eLedState){
 					
 					case LED_STOPPED:
@@ -57,7 +54,7 @@ void Automat(void){
 					break;
 			}		
 		}
-}
+
 
 int main (void) {
     unsigned int iMainLoopCtr = 0;
@@ -69,5 +66,9 @@ int main (void) {
 
     while(1) {
         iMainLoopCtr++;
+			iMainLoopCtr++;
+			iMainLoopCtr++;
+			iMainLoopCtr++;
+			iMainLoopCtr++;
     }
 }
