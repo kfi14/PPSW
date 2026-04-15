@@ -17,3 +17,85 @@ linking...
 Program Size: Code=1208 RO-data=32 RW-data=4 ZI-data=1260  
 FromELF: creating hex file...
 ".\gpio.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling timer_interrupts.c...
+timer_interrupts.c(24): warning:  #513-D: a value of type "void *" cannot be assigned to an entity of type "void (*)(void)"
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling timer_interrupts.c...
+timer_interrupts.c(24): warning:  #513-D: a value of type "void *" cannot be assigned to an entity of type "void (*)(void)"
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(10): error:  #158: expression must be an lvalue or a function designator
+main.c(15): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(10): error:  #158: expression must be an lvalue or a function designator
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling timer_interrupts.c...
+compiling main.c...
+main.c(10): error:  #158: expression must be an lvalue or a function designator
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(10): error:  #167: argument of type "void" is incompatible with parameter of type "void (*)(void)"
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(10): error:  #158: expression must be an lvalue or a function designator
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: Code=1252 RO-data=32 RW-data=8 ZI-data=1256  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 0 Warning(s).
