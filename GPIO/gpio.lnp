@@ -4,6 +4,7 @@
 ".\keyboard.o"
 ".\main.o"
 ".\timer_interrupts.o"
+".\servo.o"
 --strict --scatter ".\gpio.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

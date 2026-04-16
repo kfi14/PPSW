@@ -1,16 +1,29 @@
 #include "led.h"
 #include "timer_interrupts.h"
 #include "keyboard.h"
+#include "servo.h"
 
 void Automat(void){
 	
-			enum LedState{LED_MOVING_LEFT, LED_MOVING_RIGHT, LED_STOPPED};
-			enum LedState eLedState = LED_STOPPED;
-
+			enum LedState{LED_MOVING_LEFT, LED_MOVING_RIGHT, LED_STOPPED, CALLIB};
+			static enum LedState eLedState = CALLIB;
 
 
 				switch(eLedState){
 					
+					case CALLIB:
+						
+						if(eReadDetector() == INACTIVE){
+							LedStepLeft();
+							eLedState = CALLIB;
+						}
+						else{
+							eLedState = LED_STOPPED;
+						}
+						
+					break;
+							
+						
 					case LED_STOPPED:
 						
 						if(eKeyboardRead() == BUTTON_0){
@@ -66,9 +79,5 @@ int main (void) {
 
     while(1) {
         iMainLoopCtr++;
-			iMainLoopCtr++;
-			iMainLoopCtr++;
-			iMainLoopCtr++;
-			iMainLoopCtr++;
     }
 }
