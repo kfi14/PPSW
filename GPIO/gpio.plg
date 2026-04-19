@@ -3,16 +3,32 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\kubaficer\PPSW\GPIO\gpio.uvproj
-Project File Date:  04/16/2026
+C:\Users\jakub\AppData\Roaming\SPB_Data\PPSW\GPIO\gpio.uvproj
+Project File Date:  04/19/2026
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling main.c...
-compiling timer_interrupts.c...
 compiling servo.c...
-servo.c(19): warning:  #1-D: last line of file ends without a newline
+servo.c(30): error:  #169: expected a declaration
+servo.c(55): warning:  #12-D: parsing restarts here after previous syntax error
+servo.c(57): error:  #169: expected a declaration
+servo.c(73): warning:  #12-D: parsing restarts here after previous syntax error
+servo.c(75): error:  #169: expected a declaration
+servo.c(77): warning:  #1-D: last line of file ends without a newline
+servo.c(77): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+".\gpio.axf" - 3 Errors, 4 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling servo.c...
+servo.c(80): warning:  #1-D: last line of file ends without a newline
 linking...
-Program Size: Code=1548 RO-data=32 RW-data=8 ZI-data=1256  
+Program Size: Code=1208 RO-data=32 RW-data=4 ZI-data=1260  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 1 Warning(s).
+Build target 'Target 1'
+compiling servo.c...
+servo.c(81): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=1208 RO-data=32 RW-data=4 ZI-data=1260  
 FromELF: creating hex file...
 ".\gpio.axf" - 0 Errors, 1 Warning(s).
