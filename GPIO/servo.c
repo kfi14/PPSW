@@ -1,6 +1,7 @@
 #include <LPC21xx.H>
 #include "servo.h"
 #include "led.h"
+#include "timer_interrupts.h"
 
 #define DETECTOR_BM (1<<10)
 
@@ -78,4 +79,17 @@ void AutomatServo(void){
 	}
 }
 		
+void ServoInit(unsigned int uiServoFrequency){
+	sServo.eState = CALLIB;
+	LedInit();
+	Timer0InterruptsInit((1000000/uiServoFrequency),&AutomatServo);
+}
+
+void ServoCallib(void){
+	sServo.eState = CALLIB;
+}
+
+void ServoGoTo(unsigned int uiPosition){
+	sServo.uiDesiredPosition = uiPosition;
+}
 		

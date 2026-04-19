@@ -32,3 +32,71 @@ linking...
 Program Size: Code=1208 RO-data=32 RW-data=4 ZI-data=1260  
 FromELF: creating hex file...
 ".\gpio.axf" - 0 Errors, 1 Warning(s).
+Build target 'Target 1'
+compiling servo.c...
+servo.c(95): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol Timer0InterruptsInit (referred from servo.o).
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 2 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling servo.c...
+servo.c(95): warning:  #1-D: last line of file ends without a newline
+compiling timer_interrupts.c...
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol main (referred from rtentry2.o).
+".\gpio.axf" - 1 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling led.c...
+led.c(1): error:  #10: "#" not expected here
+led.c(1): error:  #77-D: this declaration has no storage class or type specifier
+led.c(1): error:  #65: expected a ";"
+led.c(11): error:  #20: identifier "IO1DIR" is undefined
+led.c(12): error:  #20: identifier "IO1CLR" is undefined
+led.c(13): error:  #20: identifier "IO1SET" is undefined
+led.c(18): error:  #20: identifier "IO1CLR" is undefined
+led.c(23): error:  #20: identifier "IO1SET" is undefined
+led.c(70): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+main.c(17): warning:  #223-D: function "ServoGoTo" declared implicitly
+main.c(20): warning:  #223-D: function "ServoGoTo" declared implicitly
+main.c(23): warning:  #223-D: function "ServoGoTo" declared implicitly
+".\gpio.axf" - 8 Errors, 4 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling led.c...
+led.c(70): warning:  #1-D: last line of file ends without a newline
+compiling servo.c...
+servo.c(95): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+linking...
+Program Size: Code=2340 RO-data=32 RW-data=8 ZI-data=1272  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).
