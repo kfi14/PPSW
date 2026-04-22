@@ -20,19 +20,23 @@ enum DetectorState eReadDetector(void){
 	}
 }
 
-enum ServoState {CALLIB, IDLE, IN_PROGRESS};
+enum ServoState {CALLIB, IDLE, IN_PROGRESS, OFFSET};
 
 struct Servo{
 	enum ServoState eState;
 	unsigned int uiCurrentPosition;
 	unsigned int uiDesiredPosition;
+
 }; 
 struct Servo sServo;
+
+unsigned int uiOffsetStep = 12;
 
 void AutomatServo(void){
 	
 	switch(sServo.eState){
-	
+
+
 		case CALLIB:
 		
 			if(eReadDetector() == ACTIVE){
@@ -43,6 +47,20 @@ void AutomatServo(void){
 			else{
 				LedStepLeft();
 				sServo.eState = CALLIB;
+			}
+		
+		break;
+			
+		case OFFSET:
+			
+			if(sServo.uiCurrentPosition < uiOffsetStep){
+				LedStepLeft();
+				sServo.uiCurrentPosition++;
+				sServo.eState = OFFSET;
+			}
+			else{
+				sServo.uiCurrentPosition = sServo.uiCurrentPosition + uiOffsetStep;
+				sServo.eState = IDLE;
 			}
 		
 		break;
@@ -83,13 +101,20 @@ void ServoInit(unsigned int uiServoFrequency){
 	sServo.eState = CALLIB;
 	LedInit();
 	Timer0InterruptsInit((1000000/uiServoFrequency),&AutomatServo);
+
+	while(sServo.eState != IDLE){}
 }
 
 void ServoCallib(void){
 	sServo.eState = CALLIB;
+
 }
 
 void ServoGoTo(unsigned int uiPosition){
 	sServo.uiDesiredPosition = uiPosition;
+	
+	while(sServo.eState == IN_PROGRESS){}
 }
-		
+
+
+

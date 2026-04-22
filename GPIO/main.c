@@ -8,6 +8,8 @@ int main(void){
   
     KeyboardInit();
 		ServoInit(25);
+		ServoGoTo(24);
+		ServoGoTo(12);
 
     while(1) {
         if(eKeyboardRead() == BUTTON_0){
