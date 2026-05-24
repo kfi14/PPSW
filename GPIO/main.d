@@ -3,3 +3,4 @@
 .\main.o: timer_interrupts.h
 .\main.o: keyboard.h
 .\main.o: servo.h
+.\main.o: uart.h
