@@ -11,33 +11,43 @@ int main(void){
 		unsigned int uiLoopCounter;
 	
     UART_InitWithInt(9600);
-		LedInit();
+		KeyboardInit();
+		ServoInit(50);
 	
     while(1) {
+			
+			if(eKeyboardRead() == BUTTON_0){
+					ServoCallib();
+				}
+				else if(eKeyboardRead() == BUTTON_1){
+					ServoGoTo(12);
+				}
+				else if(eKeyboardRead() == BUTTON_2){
+					ServoGoTo(24);
+				}
+				else if(eKeyboardRead() == BUTTON_3){
+					ServoGoTo(36);
+				}
+				
   		switch(cOdebranyZnak){
 				
-				case '0':
-					LedOn(0);
-					cOdebranyZnak = 0;
-				break;
-				
 				case '1':
-					LedOn(1);
+					ServoGoTo(12);
 					cOdebranyZnak = 0;
 				break;
 				
 				case '2':
-					LedOn(2);
+					ServoGoTo(24);
 					cOdebranyZnak = 0;
 				break;
 				
 				case '3':
-					LedOn(3);
+					ServoGoTo(36);
 					cOdebranyZnak = 0;
 				break;
 				
 				case 'c':
-					LedOn(4);
+					ServoCallib();
 					cOdebranyZnak = 0;
 				break;
 				
