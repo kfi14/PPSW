@@ -29,7 +29,7 @@
 
 
 /************ Decoding**********/
-#define RECIEVER_SIZE 														4
+#define RECIEVER_SIZE 														6
 #define TERMINATOR 																' '
 #define NULL                                      '\0'
 
@@ -46,6 +46,7 @@ __irq void UART0_Interrupt (void) {
    if      ((uiCopyOfU0IIR & mINTERRUPT_PENDING_IDETIFICATION_BITFIELD) == mRX_DATA_AVALIABLE_INTERRUPT_PENDING) // odebrano znak
    {
       cOdebranyZnak = U0RBR;
+			Reciever_PutCharacterToBuffer(cOdebranyZnak);
    } 
    
    if ((uiCopyOfU0IIR & mINTERRUPT_PENDING_IDETIFICATION_BITFIELD) == mTHRE_INTERRUPT_PENDING)              // wyslano znak - nadajnik pusty 
@@ -84,14 +85,13 @@ struct RecieverBuffer sBuffer;
 
 void Reciever_PutCharacterToBuffer(char cCharacter){
 		
-	if(cCharacter == TERMINATOR && sBuffer.ucCharCtr < RECIEVER_SIZE){
+	if(cCharacter == TERMINATOR && sBuffer.ucCharCtr <= RECIEVER_SIZE){
 		sBuffer.cData[sBuffer.ucCharCtr] = NULL;
 		sBuffer.eStatus = READY;
 		sBuffer.ucCharCtr = 0;
 	}
 	else if(sBuffer.ucCharCtr >= RECIEVER_SIZE){
 		sBuffer.eStatus = OVERFLOW;
-		return;
 	}
 	else{
 	  sBuffer.cData[sBuffer.ucCharCtr] = cCharacter;
@@ -113,4 +113,14 @@ void Reciever_GetStringCopy(char * ucDestination){
 	ucDestination[sBuffer.ucCharCtr] = NULL;
 	sBuffer.ucCharCtr = 0;
 	sBuffer.eStatus = EMPTY;
+}
+
+enum CompResult eCompareString(char pcStr1[], char pcStr2[]) {
+    unsigned char ucCharacterCounter;
+    for (ucCharacterCounter = 0; (pcStr1[ucCharacterCounter] != NULL) || (pcStr2[ucCharacterCounter] != NULL); ucCharacterCounter++) {
+        if (pcStr1[ucCharacterCounter] != pcStr2[ucCharacterCounter]) {
+            return DIFFERENT;
+        }
+    }
+    return EQUAL;
 }
