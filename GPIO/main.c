@@ -7,9 +7,11 @@
 
 int main(void){
 	
-		unsigned int uiLoopCounter;
 		extern char cOdebranyZnak;
-    UART_InitWithInt(38400);
+		unsigned int uiLoopCounter;
+	
+    UART_InitWithInt(9600);
+		LedInit();
 	
     while(1) {
   		switch(cOdebranyZnak){
@@ -38,9 +40,12 @@ int main(void){
 					LedOn(4);
 					cOdebranyZnak = 0;
 				break;
+				
+				default:
+				break;
 					
 			}
-				
+			uiLoopCounter++;
 			
     }
 }

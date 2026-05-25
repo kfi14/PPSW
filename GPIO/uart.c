@@ -16,7 +16,7 @@
 #define mRX_DATA_AVALIABLE_INTERRUPT_PENDING       0x00000004
 
 // Pin Function Select Register
-#define mP01_AS_UART0_RxD                           0x00000004
+#define mP01_AS_UART0_RxD                          0x00000004
 
 
 /************ Interrupts **********/
