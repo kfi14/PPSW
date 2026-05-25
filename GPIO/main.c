@@ -9,6 +9,7 @@ int main(void){
 	
 		extern char cOdebranyZnak;
 		unsigned int uiLoopCounter;
+		unsigned int uiDegreeChange;
 	
     UART_InitWithInt(9600);
 		KeyboardInit();
@@ -32,7 +33,8 @@ int main(void){
   		switch(cOdebranyZnak){
 				
 				case '1':
-					ServoGoTo(12);
+					uiDegreeChange = uiDegreeChange+12;
+					ServoGoTo(uiDegreeChange);
 					cOdebranyZnak = 0;
 				break;
 				

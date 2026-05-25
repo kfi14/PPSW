@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\jakub\AppData\Roaming\SPB_Data\PPSW\GPIO\gpio.uvproj
+Project File Date:  05/25/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=2892 RO-data=32 RW-data=16 ZI-data=1272  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 1 Warning(s).
