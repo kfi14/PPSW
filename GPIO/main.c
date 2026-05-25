@@ -7,57 +7,15 @@
 
 int main(void){
 	
-		extern char cOdebranyZnak;
-		unsigned int uiLoopCounter;
-		unsigned int uiDegreeChange;
-	
-    UART_InitWithInt(9600);
-		KeyboardInit();
-		ServoInit(50);
-	
-    while(1) {
-			
-			if(eKeyboardRead() == BUTTON_0){
-					ServoCallib();
-				}
-				else if(eKeyboardRead() == BUTTON_1){
-					ServoGoTo(12);
-				}
-				else if(eKeyboardRead() == BUTTON_2){
-					ServoGoTo(24);
-				}
-				else if(eKeyboardRead() == BUTTON_3){
-					ServoGoTo(36);
-				}
-				
-  		switch(cOdebranyZnak){
-				
-				case '1':
-					uiDegreeChange = uiDegreeChange+12;
-					ServoGoTo(uiDegreeChange);
-					cOdebranyZnak = 0;
-				break;
-				
-				case '2':
-					ServoGoTo(24);
-					cOdebranyZnak = 0;
-				break;
-				
-				case '3':
-					ServoGoTo(36);
-					cOdebranyZnak = 0;
-				break;
-				
-				case 'c':
-					ServoCallib();
-					cOdebranyZnak = 0;
-				break;
-				
-				default:
-				break;
-					
-			}
-			uiLoopCounter++;
-			
+		
+			Reciever_PutCharacterToBuffer ('k');
+			Reciever_PutCharacterToBuffer ('o');
+			Reciever_PutCharacterToBuffer ('d');
+			Reciever_PutCharacterToBuffer ('1');
+			Reciever_PutCharacterToBuffer ('1');
+			Reciever_PutCharacterToBuffer ('1');
+			Reciever_PutCharacterToBuffer (' ');
+    
+		while(1) {
     }
 }

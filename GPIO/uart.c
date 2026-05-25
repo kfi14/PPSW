@@ -27,6 +27,12 @@
 // VICVectCntlx Vector Control Registers
 #define mIRQ_SLOT_ENABLE                           0x00000020
 
+
+/************ Decoding**********/
+#define RECIEVER_SIZE 														4
+#define TERMINATOR 																' '
+#define NULL                                      '\0'
+
 ////////////// Zmienne globalne ////////////
 char cOdebranyZnak;
 
@@ -64,4 +70,47 @@ void UART_InitWithInt(unsigned int uiBaudRate){
    VICVectAddr1  = (unsigned long) UART0_Interrupt;             // set interrupt service routine address
    VICVectCntl1  = mIRQ_SLOT_ENABLE | VIC_UART0_CHANNEL_NR;     // use it for UART 0 Interrupt
    VICIntEnable |= (0x1 << VIC_UART0_CHANNEL_NR);               // Enable UART 0 Interrupt Channel
+}
+
+
+
+
+struct RecieverBuffer{ 
+	char cData[RECIEVER_SIZE];
+	unsigned char ucCharCtr;
+	enum eRecieverStatus eStatus;
+};
+struct RecieverBuffer sBuffer;
+
+void Reciever_PutCharacterToBuffer(char cCharacter){
+		
+	if(cCharacter == TERMINATOR && sBuffer.ucCharCtr < RECIEVER_SIZE){
+		sBuffer.cData[sBuffer.ucCharCtr] = NULL;
+		sBuffer.eStatus = READY;
+		sBuffer.ucCharCtr = 0;
+	}
+	else if(sBuffer.ucCharCtr >= RECIEVER_SIZE){
+		sBuffer.eStatus = OVERFLOW;
+		return;
+	}
+	else{
+	  sBuffer.cData[sBuffer.ucCharCtr] = cCharacter;
+		sBuffer.ucCharCtr++;
+	}
+}
+
+enum eRecieverStatus eReciever_GetStatus(void){
+	
+	return sBuffer.eStatus;
+}
+
+void Reciever_GetStringCopy(char * ucDestination){
+	
+	for(sBuffer.ucCharCtr = 0; sBuffer.ucCharCtr != NULL; sBuffer.ucCharCtr++){
+		sBuffer.cData[sBuffer.ucCharCtr] = ucDestination[sBuffer.ucCharCtr];
+	}
+	
+	ucDestination[sBuffer.ucCharCtr] = NULL;
+	sBuffer.ucCharCtr = 0;
+	sBuffer.eStatus = EMPTY;
 }
