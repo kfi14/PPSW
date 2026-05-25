@@ -14,19 +14,19 @@ int main(void){
 	
 		UART_InitWithInt(9600);
 		ServoInit(50);
-    
+	
 		while(1) {
 			if(eReciever_GetStatus() == READY){
 				
 				Reciever_GetStringCopy(cDestination);
 				
-				if(eCompareString(cDestination, Str1) == EQUAL){
+				if(eCompareString(cDestination, Str1)){
 					ServoCallib();
 				}
-				else if(eCompareString(cDestination, Str2) == EQUAL){
+				else if(eCompareString(cDestination, Str2)){
 					ServoGoTo(12);	
 				}
-				else if(eCompareString(cDestination, Str3) == EQUAL){
+				else if(eCompareString(cDestination, Str3)){
 					ServoGoTo(36);
 				}			
 			}

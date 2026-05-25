@@ -29,7 +29,7 @@
 
 
 /************ Decoding**********/
-#define RECIEVER_SIZE 														6
+#define RECIEVER_SIZE 														7
 #define TERMINATOR 																' '
 #define NULL                                      '\0'
 
@@ -84,8 +84,8 @@ struct RecieverBuffer{
 struct RecieverBuffer sBuffer;
 
 void Reciever_PutCharacterToBuffer(char cCharacter){
-		
-	if(cCharacter == TERMINATOR && sBuffer.ucCharCtr <= RECIEVER_SIZE){
+
+	if(cCharacter == TERMINATOR && sBuffer.ucCharCtr <= RECIEVER_SIZE ){
 		sBuffer.cData[sBuffer.ucCharCtr] = NULL;
 		sBuffer.eStatus = READY;
 		sBuffer.ucCharCtr = 0;
@@ -106,8 +106,8 @@ enum eRecieverStatus eReciever_GetStatus(void){
 
 void Reciever_GetStringCopy(char * ucDestination){
 	
-	for(sBuffer.ucCharCtr = 0; sBuffer.ucCharCtr != NULL; sBuffer.ucCharCtr++){
-		sBuffer.cData[sBuffer.ucCharCtr] = ucDestination[sBuffer.ucCharCtr];
+	for(sBuffer.ucCharCtr = 0; sBuffer.cData[sBuffer.ucCharCtr] != NULL; sBuffer.ucCharCtr++){
+		ucDestination[sBuffer.ucCharCtr] = sBuffer.cData[sBuffer.ucCharCtr];
 	}
 	
 	ucDestination[sBuffer.ucCharCtr] = NULL;
