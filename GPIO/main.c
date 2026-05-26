@@ -3,32 +3,37 @@
 #include "keyboard.h"
 #include "servo.h"
 #include "uart.h"
+#include "string.h"
+#include "command_decoder.h"
 
 
 int main(void){
 	
-		char Str1[] = "callib";
-		char Str2[] = "left";
-		char Str3[] = "right";
-		char cDestination[10];
-	
+
+		char cDestination[12];
+		
 		UART_InitWithInt(9600);
+		DetectorInit();
 		ServoInit(50);
 	
 		while(1) {
 			if(eReciever_GetStatus() == READY){
 				
 				Reciever_GetStringCopy(cDestination);
+				DecodeMsg(cDestination);
 				
-				if(eCompareString(cDestination, Str1)){
-					ServoCallib();
-				}
-				else if(eCompareString(cDestination, Str2)){
-					ServoGoTo(12);	
-				}
-				else if(eCompareString(cDestination, Str3)){
-					ServoGoTo(36);
-				}			
-			}
+				if((ucTokenNr != 0) && (asToken[0].eType == KEYWORD)){
+					switch (asToken[0].uValue.eKeyword) {
+				
+						case CLB:					
+							ServoCallib();
+						break;
+					
+						case GT:
+							ServoGoTo(asToken[1].uValue.uiValue);					
+						break;
+					}
+			}			
+		}
 	}
 }

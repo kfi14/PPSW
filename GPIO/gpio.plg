@@ -1,0 +1,610 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\jakub\AppData\Roaming\SPB_Data\PPSW\GPIO\gpio.uvproj
+Project File Date:  05/26/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 3 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(5): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+command_decoder.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 6 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 6 Warning(s).
+Build target 'Target 1'
+compiling command_decoder.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 1 Warning(s).
+Build target 'Target 1'
+compiling command_decoder.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 1 Warning(s).
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling led.c...
+led.c(70): warning:  #1-D: last line of file ends without a newline
+compiling keyboard.c...
+compiling uart.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+compiling timer_interrupts.c...
+compiling servo.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling string.c...
+compiling command_decoder.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3240 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+main.c(38): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3252 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3236 RO-data=32 RW-data=16 ZI-data=1280  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling string.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+compiling command_decoder.c...
+command_decoder.h(4): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3728 RO-data=32 RW-data=56 ZI-data=1304  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 8 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(36): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3728 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(37): warning:  #1-D: last line of file ends without a newline
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3736 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+main.c(33): warning:  #1-D: last line of file ends without a newline
+main.c(33): error:  #169: expected a declaration
+compiling command_decoder.c...
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.c(58): error:  #101: "TokenValue" has already been declared in the current scope
+command_decoder.c(62): error:  #101: "Token" has already been declared in the current scope
+".\gpio.axf" - 6 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+main.c(33): warning:  #1-D: last line of file ends without a newline
+main.c(33): error:  #169: expected a declaration
+compiling command_decoder.c...
+command_decoder.h(17): error:  #20: identifier "MAX_TOKEN_NR" is undefined
+string.h(5): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 4 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+main.c(33): warning:  #1-D: last line of file ends without a newline
+main.c(33): error:  #169: expected a declaration
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 1 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by main.o and uart.o).
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and uart.o).
+".\gpio.axf" - 2 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(9): error:  #70: incomplete type is not allowed
+command_decoder.h(13): error:  #70: incomplete type is not allowed
+command_decoder.h(20): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(9): error:  #70: incomplete type is not allowed
+command_decoder.h(13): error:  #70: incomplete type is not allowed
+command_decoder.h(20): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+compiling command_decoder.c...
+command_decoder.h(9): error:  #70: incomplete type is not allowed
+command_decoder.h(13): error:  #70: incomplete type is not allowed
+command_decoder.h(20): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 6 Errors, 11 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+command_decoder.h(22): error:  #101: "KeywordCode" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "CLB" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "GT" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "TokenType" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "KEYWORD" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "NUMBER" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "STRING" has already been declared in the current scope
+command_decoder.h(24): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(22): error:  #101: "KeywordCode" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "CLB" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "GT" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "TokenType" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "KEYWORD" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "NUMBER" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "STRING" has already been declared in the current scope
+command_decoder.h(24): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+compiling command_decoder.c...
+command_decoder.h(22): error:  #101: "KeywordCode" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "CLB" has already been declared in the current scope
+command_decoder.h(22): error:  #101: "GT" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "TokenType" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "KEYWORD" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "NUMBER" has already been declared in the current scope
+command_decoder.h(23): error:  #101: "STRING" has already been declared in the current scope
+command_decoder.h(24): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.c(134): warning:  #167-D: argument of type "enum KeywordCode *" is incompatible with parameter of type "enum KeywordCode *"
+command_decoder.c(135): warning:  #188-D: enumerated type mixed with another type
+command_decoder.c(138): warning:  #188-D: enumerated type mixed with another type
+command_decoder.c(141): warning:  #188-D: enumerated type mixed with another type
+".\gpio.axf" - 21 Errors, 15 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+main.c(16): warning:  #177-D: variable "uiValue" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by main.o and uart.o).
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and uart.o).
+".\gpio.axf" - 2 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol asToken (referred from main.o).
+".\gpio.axf" - 1 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by main.o and uart.o).
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and uart.o).
+".\gpio.axf" - 2 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+uart.c(45): warning:  #223-D: function "Reciever_PutCharacterToBuffer" declared implicitly
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and main.o).
+".\gpio.axf" - 1 Errors, 1 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by main.o and uart.o).
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and uart.o).
+".\gpio.axf" - 2 Errors, 0 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and main.o).
+".\gpio.axf" - 1 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and main.o).
+".\gpio.axf" - 1 Errors, 6 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(29): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+.\gpio.axf: Error: L6200E: Symbol asToken multiply defined (by command_decoder.o and main.o).
+".\gpio.axf" - 1 Errors, 6 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(26): error:  #20: identifier "asToken" is undefined
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 1 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(16): error:  #40: expected an identifier
+main.c(26): error:  #20: identifier "asToken" is undefined
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+".\gpio.axf" - 2 Errors, 6 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(15): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+command_decoder.h(15): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol Reciever_PutCharacterToBuffer (referred from uart.o).
+.\gpio.axf: Error: L6218E: Undefined symbol Reciever_GetStringCopy (referred from main.o).
+.\gpio.axf: Error: L6218E: Undefined symbol eReciever_GetStatus (referred from main.o).
+".\gpio.axf" - 3 Errors, 9 Warning(s).
+Target not created
+Rebuild target 'Target 1'
+assembling Startup.s...
+compiling led.c...
+led.c(70): warning:  #1-D: last line of file ends without a newline
+compiling keyboard.c...
+compiling uart.c...
+compiling timer_interrupts.c...
+compiling servo.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+command_decoder.h(15): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling string.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+compiling command_decoder.c...
+command_decoder.h(15): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol Reciever_PutCharacterToBuffer (referred from uart.o).
+.\gpio.axf: Error: L6218E: Undefined symbol Reciever_GetStringCopy (referred from main.o).
+.\gpio.axf: Error: L6218E: Undefined symbol eReciever_GetStatus (referred from main.o).
+".\gpio.axf" - 3 Errors, 12 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+uart.c(117): error:  #97: a function may not return a value of this type
+uart.c(121): error:  #20: identifier "DIFFERENT" is undefined
+uart.c(124): error:  #20: identifier "EQUAL" is undefined
+uart.c(125): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(31): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+".\gpio.axf" - 3 Errors, 8 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+uart.c(125): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6200E: Symbol eCompareString multiply defined (by string.o and uart.o).
+".\gpio.axf" - 1 Errors, 2 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling uart.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3680 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 6 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3748 RO-data=32 RW-data=44 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=48 ZI-data=1304  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 7 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=36 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+linking...
+Program Size: Code=3740 RO-data=32 RW-data=36 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 6 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(40): warning:  #1-D: last line of file ends without a newline
+main.c(12): warning:  #177-D: variable "Str1" was declared but never referenced
+main.c(13): warning:  #177-D: variable "Str2" was declared but never referenced
+main.c(14): warning:  #177-D: variable "Str3" was declared but never referenced
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+.\gpio.axf: Error: L6218E: Undefined symbol ucTokenCounter (referred from main.o).
+".\gpio.axf" - 1 Errors, 7 Warning(s).
+Target not created
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(38): warning:  #1-D: last line of file ends without a newline
+compiling command_decoder.c...
+string.h(5): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3688 RO-data=32 RW-data=36 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=3688 RO-data=32 RW-data=36 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(5): warning:  #1-D: last line of file ends without a newline
+main.c(39): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3696 RO-data=32 RW-data=36 ZI-data=1308  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 3 Warning(s).

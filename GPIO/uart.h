@@ -4,5 +4,3 @@ enum eRecieverStatus eReciever_GetStatus(void);
 void Reciever_GetStringCopy(char * ucDestination);
 enum eRecieverStatus {EMPTY, READY, OVERFLOW};
 
-enum CompResult {DIFFERENT, EQUAL};
-enum CompResult eCompareString(char pcStr1[], char pcStr2[]);

@@ -1,5 +1,7 @@
 #include <LPC210X.H>
 #include "uart.h"
+#include "string.h"
+
 
 /************ UART ************/
 // U0LCR Line Control Register
@@ -28,14 +30,13 @@
 #define mIRQ_SLOT_ENABLE                           0x00000020
 
 
-/************ Decoding**********/
-#define RECIEVER_SIZE 														7
-#define TERMINATOR 																' '
-#define NULL                                      '\0'
-
 ////////////// Zmienne globalne ////////////
 char cOdebranyZnak;
 
+/************ Buffer **********/
+#define RECIEVER_SIZE 														12
+#define TERMINATOR 																'\r'
+#define NULL 																			'\0'
 
 ///////////////////////////////////////////
 __irq void UART0_Interrupt (void) {
@@ -72,8 +73,6 @@ void UART_InitWithInt(unsigned int uiBaudRate){
    VICVectCntl1  = mIRQ_SLOT_ENABLE | VIC_UART0_CHANNEL_NR;     // use it for UART 0 Interrupt
    VICIntEnable |= (0x1 << VIC_UART0_CHANNEL_NR);               // Enable UART 0 Interrupt Channel
 }
-
-
 
 
 struct RecieverBuffer{ 
@@ -113,14 +112,4 @@ void Reciever_GetStringCopy(char * ucDestination){
 	ucDestination[sBuffer.ucCharCtr] = NULL;
 	sBuffer.ucCharCtr = 0;
 	sBuffer.eStatus = EMPTY;
-}
-
-enum CompResult eCompareString(char pcStr1[], char pcStr2[]) {
-    unsigned char ucCharacterCounter;
-    for (ucCharacterCounter = 0; (pcStr1[ucCharacterCounter] != NULL) || (pcStr2[ucCharacterCounter] != NULL); ucCharacterCounter++) {
-        if (pcStr1[ucCharacterCounter] != pcStr2[ucCharacterCounter]) {
-            return DIFFERENT;
-        }
-    }
-    return EQUAL;
 }
