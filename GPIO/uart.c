@@ -19,6 +19,7 @@
 
 // Pin Function Select Register
 #define mP01_AS_UART0_RxD                          0x00000004
+#define mP01_AS_UART_TxD													 0x00000001
 
 
 /************ Interrupts **********/
@@ -32,11 +33,15 @@
 
 ////////////// Zmienne globalne ////////////
 char cOdebranyZnak;
+unsigned char cWyslanyZnak;
 
 /************ Buffer **********/
+// RECIEVER
 #define RECIEVER_SIZE 														12
 #define TERMINATOR 																'\r'
 #define NULL 																			'\0'
+// TRANSMITTER
+#define TRANSMITER_SIZE													10
 
 ///////////////////////////////////////////
 __irq void UART0_Interrupt (void) {
@@ -52,7 +57,9 @@ __irq void UART0_Interrupt (void) {
    
    if ((uiCopyOfU0IIR & mINTERRUPT_PENDING_IDETIFICATION_BITFIELD) == mTHRE_INTERRUPT_PENDING)              // wyslano znak - nadajnik pusty 
    {
-      // narazie nic nie wysylamy
+      cWyslanyZnak++;
+			U0THR = cWyslanyZnak;
+		 
    }
 
    VICVectAddr = 0; // Acknowledge Interrupt
@@ -62,7 +69,7 @@ __irq void UART0_Interrupt (void) {
 void UART_InitWithInt(unsigned int uiBaudRate){
 
    // UART0
-   PINSEL0 = PINSEL0 | mP01_AS_UART0_RxD;                        // ustawic pina na odbiornik uart0
+   PINSEL0 = PINSEL0 | mP01_AS_UART0_RxD | mP01_AS_UART_TxD;   // ustawic pina na odbiornik uart0
    U0LCR  |= m8BIT_UART_WORD_LENGTH | mDIVISOR_LATCH_ACCES_BIT; // dlugosc slowa, DLAB = 1
    U0DLL   = (((15000000)/16)/uiBaudRate);                      // predkosc transmisji
    U0LCR  &= (~mDIVISOR_LATCH_ACCES_BIT);                       // DLAB = 0
@@ -105,11 +112,52 @@ enum eRecieverStatus eReciever_GetStatus(void){
 
 void Reciever_GetStringCopy(char * ucDestination){
 	
-	for(sBuffer.ucCharCtr = 0; sBuffer.cData[sBuffer.ucCharCtr] != NULL; sBuffer.ucCharCtr++){
-		ucDestination[sBuffer.ucCharCtr] = sBuffer.cData[sBuffer.ucCharCtr];
-	}
-	
-	ucDestination[sBuffer.ucCharCtr] = NULL;
+	CopyString(sBuffer.cData, ucDestination);
 	sBuffer.ucCharCtr = 0;
 	sBuffer.eStatus = EMPTY;
 }
+
+
+  
+struct TransmiterBuffer{ 
+char cData[TRANSMITER_SIZE];   
+enum     eTransmiterStatus eStatus;  
+unsigned char fLastCharacter;  
+unsigned char cCharCtr;  
+};   
+struct TransmiterBuffer sTransmiterBuffer;  
+
+
+
+char Transmiter_GetCharacterFromBuffer(void){
+	if(1 == sTransmiterBuffer.fLastCharacter){
+		sTransmiterBuffer.fLastCharacter = 0;
+		sTransmiterBuffer.eStatus = FREE;
+		return NULL;
+	}
+	else if(NULL == sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr]){
+		sTransmiterBuffer.cCharCtr++;
+		sTransmiterBuffer.fLastCharacter = 1;
+		return TERMINATOR;
+	}
+	else{
+		sTransmiterBuffer.cCharCtr++;
+		return sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr++];
+	}
+}
+
+
+void Transmiter_SendString(char cString[]){
+	CopyString(cString, sTransmiterBuffer.cData);
+	U0THR = sTransmiterBuffer.cData[0];
+	sTransmiterBuffer.eStatus = BUSY;
+	sTransmiterBuffer.cCharCtr = 0;
+}
+
+
+enum eTransmiterStatus Transmiter_GetStatus(void){
+	return sTransmiterBuffer.eStatus;
+}
+
+
+

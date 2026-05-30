@@ -5,35 +5,11 @@
 #include "uart.h"
 #include "string.h"
 #include "command_decoder.h"
+#include <LPC21xx.H>
 
 
-int main(void){
-	
+int main() {
 
-		char cDestination[12];
-		
-		UART_InitWithInt(9600);
-		DetectorInit();
-		ServoInit(50);
-	
-		while(1) {
-			if(eReciever_GetStatus() == READY){
-				
-				Reciever_GetStringCopy(cDestination);
-				DecodeMsg(cDestination);
-				
-				if((ucTokenNr != 0) && (asToken[0].eType == KEYWORD)){
-					switch (asToken[0].uValue.eKeyword) {
-				
-						case CLB:					
-							ServoCallib();
-						break;
-					
-						case GT:
-							ServoGoTo(asToken[1].uValue.uiValue);					
-						break;
-					}
-			}			
-		}
+	while(1) {
 	}
 }
