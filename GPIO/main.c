@@ -7,9 +7,13 @@
 #include "command_decoder.h"
 #include <LPC21xx.H>
 
+extern char cWyslanyZnak;
 
 int main() {
-
+	unsigned int uiLoopCtr;
+	UART_InitWithInt(9600);
+	U0THR = cWyslanyZnak;
 	while(1) {
+		uiLoopCtr++;
 	}
 }
