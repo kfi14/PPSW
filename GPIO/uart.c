@@ -41,7 +41,7 @@ char cWyslanyZnak;
 #define TERMINATOR 																'\r'
 #define NULL 																			'\0'
 // TRANSMITTER
-#define TRANSMITER_SIZE													8
+#define TRANSMITER_SIZE													20
 
 ///////////////////////////////////////////
 __irq void UART0_Interrupt (void) {

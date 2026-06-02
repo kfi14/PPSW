@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\kubaficer\PPSW\GPIO\gpio.uvproj
+Project File Date:  05/31/2026
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+Program Size: Code=2228 RO-data=32 RW-data=4 ZI-data=1284  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+string.h(7): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(7): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(16): warning:  #177-D: variable "cString" was declared but never referenced
+compiling string.c...
+string.h(7): warning:  #1-D: last line of file ends without a newline
+compiling command_decoder.c...
+string.h(7): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=2432 RO-data=48 RW-data=4 ZI-data=1284  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(7): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(16): warning:  #177-D: variable "cString" was declared but never referenced
+linking...
+Program Size: Code=2432 RO-data=48 RW-data=4 ZI-data=1284  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 4 Warning(s).
+Build target 'Target 1'
+compiling uart.c...
+string.h(7): warning:  #1-D: last line of file ends without a newline
+compiling main.c...
+servo.h(8): warning:  #1-D: last line of file ends without a newline
+string.h(7): warning:  #1-D: last line of file ends without a newline
+main.c(32): warning:  #1-D: last line of file ends without a newline
+main.c(16): warning:  #177-D: variable "cString" was declared but never referenced
+linking...
+Program Size: Code=2536 RO-data=52 RW-data=4 ZI-data=1300  
+FromELF: creating hex file...
+".\gpio.axf" - 0 Errors, 5 Warning(s).

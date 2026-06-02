@@ -76,3 +76,38 @@ void CopyString(char pcSource[], char pcDestination[])
     pcDestination[ucCharacterCounter] = NULL;
 }
 
+
+
+
+
+void UIntToHexStr(unsigned int uiValue, char pcStr[])
+{
+   unsigned char ucNibbleCounter;
+   unsigned char ucCurrentNibble;
+
+   pcStr[0] = '0';
+   pcStr[1] = 'x';
+   pcStr[6] = NULL;
+   for(ucNibbleCounter = 0 ; ucNibbleCounter < 4 ; ucNibbleCounter++)
+   {
+      ucCurrentNibble = (uiValue >> (ucNibbleCounter * 4)) & 0x0F;
+      if(ucCurrentNibble<10)
+      {
+          pcStr[5 - ucNibbleCounter] = '0' + ucCurrentNibble;
+      }
+      else
+      {
+         pcStr[5 - ucNibbleCounter] = 'A' + (ucCurrentNibble - 10);
+      }
+   }
+}
+
+
+void AppendUIntToString(unsigned int uiValue, char pcDestinationStr[])
+{
+    unsigned char ucArrayEndCounter;
+
+    for(ucArrayEndCounter = 0; pcDestinationStr[ucArrayEndCounter] != NULL; ucArrayEndCounter++){}
+    UIntToHexStr(uiValue, &pcDestinationStr[ucArrayEndCounter]);
+}
+
