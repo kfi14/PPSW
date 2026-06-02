@@ -57,8 +57,8 @@ __irq void UART0_Interrupt (void) {
    
    if ((uiCopyOfU0IIR & mINTERRUPT_PENDING_IDETIFICATION_BITFIELD) == mTHRE_INTERRUPT_PENDING)              // wyslano znak - nadajnik pusty 
    {
-      cWyslanyZnak++;
-			U0THR = Transmiter_GetCharacterFromBuffer();
+      char cNextChar = Transmiter_GetCharacterFromBuffer();
+			U0THR = cNextChar;
 		 
    }
 
@@ -121,7 +121,7 @@ void Reciever_GetStringCopy(char * ucDestination){
   
 struct TransmiterBuffer{ 
 char cData[TRANSMITER_SIZE];   
-enum     eTransmiterStatus eStatus;  
+volatile enum     eTransmiterStatus eStatus;  
 unsigned char fLastCharacter;  
 unsigned char cCharCtr;  
 };   
@@ -129,37 +129,31 @@ struct TransmiterBuffer sTransmiterBuffer;
 
 
 
-char Transmiter_GetCharacterFromBuffer() {
-	static char cTransmitChar;
-	
-	if((NULL != sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr]) && (0 == sTransmiterBuffer.fLastCharacter)) {
-		
-		cTransmitChar = sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr];
-		sTransmiterBuffer.cCharCtr++;
-		return cTransmitChar;
-	} else if ((NULL == sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr]) && (0 == sTransmiterBuffer.fLastCharacter)){
-		
-		sTransmiterBuffer.fLastCharacter = 1; 
-		return TERMINATOR;
-	}	else if ((NULL == sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr]) && (1 == sTransmiterBuffer.fLastCharacter)){
-		
-		sTransmiterBuffer.cCharCtr = 0;
-		sTransmiterBuffer.fLastCharacter = 0; 
+char Transmiter_GetCharacterFromBuffer(void){
+	if(1 == sTransmiterBuffer.fLastCharacter){
+		sTransmiterBuffer.fLastCharacter = 0;
 		sTransmiterBuffer.eStatus = FREE;
-		
+		sTransmiterBuffer.cCharCtr=0;
 		return NULL;
 	}
-	
-	return NULL;
+	else if(NULL == sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr]){
+		sTransmiterBuffer.fLastCharacter = 1;
+		return TERMINATOR;
+	}
+	else{
+		return sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr++];
+	}
 }
-
 
 
 void Transmiter_SendString(char cString[]){
 	CopyString(cString, sTransmiterBuffer.cData);
-	U0THR = sTransmiterBuffer.cData[0];
-	sTransmiterBuffer.eStatus = BUSY;
+	
+	sTransmiterBuffer.fLastCharacter = 0;
 	sTransmiterBuffer.cCharCtr=1;
+	sTransmiterBuffer.eStatus = BUSY;
+	
+	U0THR = sTransmiterBuffer.cData[0];
 }
 
 

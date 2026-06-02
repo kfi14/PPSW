@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\gpio.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\gpio.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jun 02 16:19:15 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jun 02 17:52:31 2026
 <BR><P>
 <H3>Maximum Stack Usage =         28 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -181,7 +181,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[1d]"></a>Transmiter_GetCharacterFromBuffer</STRONG> (ARM, 216 bytes, Stack size 0 bytes, uart.o(.text))
+<P><STRONG><a name="[1d]"></a>Transmiter_GetCharacterFromBuffer</STRONG> (ARM, 120 bytes, Stack size 0 bytes, uart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Interrupt
 </UL>
 
@@ -189,7 +189,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART0_Interrupt
 </UL>
 
-<P><STRONG><a name="[1b]"></a>UART0_Interrupt</STRONG> (ARM, 112 bytes, Stack size 28 bytes, uart.o(.text))
+<P><STRONG><a name="[1b]"></a>UART0_Interrupt</STRONG> (ARM, 100 bytes, Stack size 28 bytes, uart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = UART0_Interrupt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reciever_PutCharacterToBuffer
@@ -212,7 +212,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyString
 </UL>
 
-<P><STRONG><a name="[22]"></a>Transmiter_SendString</STRONG> (ARM, 60 bytes, Stack size 8 bytes, uart.o(.text))
+<P><STRONG><a name="[22]"></a>Transmiter_SendString</STRONG> (ARM, 68 bytes, Stack size 8 bytes, uart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Transmiter_SendString
 </UL>
 <BR>[Calls]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CopyString
