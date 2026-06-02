@@ -11,9 +11,12 @@ extern char cWyslanyZnak;
 
 int main() {
 	unsigned int uiLoopCtr;
+
 	UART_InitWithInt(9600);
-	U0THR = cWyslanyZnak;
 	while(1) {
+		if(Transmiter_GetStatus() == FREE){
+			Transmiter_SendString("test123");
+			}
 		uiLoopCtr++;
 	}
 }
