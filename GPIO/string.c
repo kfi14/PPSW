@@ -111,3 +111,13 @@ void AppendUIntToString(unsigned int uiValue, char pcDestinationStr[])
     UIntToHexStr(uiValue, &pcDestinationStr[ucArrayEndCounter]);
 }
 
+
+void AppendString (char pcSourceStr[], char pcDestinationStr[])
+{
+
+    unsigned char ucCharacterCounter ;
+
+    for(ucCharacterCounter = 0 ; pcDestinationStr[ucCharacterCounter] !=NULL; ucCharacterCounter++){}
+    CopyString(pcSourceStr, pcDestinationStr + ucCharacterCounter);
+}
+

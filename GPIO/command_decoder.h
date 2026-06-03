@@ -1,6 +1,6 @@
 #define MAX_TOKEN_NR 															3 
 
-enum KeywordCode {CLB, GT};
+enum KeywordCode {CLB, GT, CAL};
 enum TokenType {KEYWORD, NUMBER, STRING};
 void DecodeMsg(char *pcString);
 

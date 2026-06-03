@@ -41,7 +41,7 @@ char cWyslanyZnak;
 #define TERMINATOR 																'\r'
 #define NULL 																			'\0'
 // TRANSMITTER
-#define TRANSMITER_SIZE													20
+#define TRANSMITER_SIZE													30
 
 ///////////////////////////////////////////
 __irq void UART0_Interrupt (void) {
@@ -58,8 +58,9 @@ __irq void UART0_Interrupt (void) {
    if ((uiCopyOfU0IIR & mINTERRUPT_PENDING_IDETIFICATION_BITFIELD) == mTHRE_INTERRUPT_PENDING)              // wyslano znak - nadajnik pusty 
    {
       char cNextChar = Transmiter_GetCharacterFromBuffer();
-			U0THR = cNextChar;
-		 
+			if(cNextChar != NULL){
+				U0THR = cNextChar;
+			}
    }
 
    VICVectAddr = 0; // Acknowledge Interrupt

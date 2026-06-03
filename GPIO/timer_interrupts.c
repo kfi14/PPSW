@@ -32,3 +32,30 @@ void Timer0InterruptsInit(unsigned int uiPeriod,void(*ptrInterruptFunction)(void
 
     T0TCR |=  mCOUNTER_ENABLE; 
 }
+
+
+
+struct Watch sWatch;
+
+void WatchUpdate(void){
+	
+	sWatch.fSecondsValueChanged = 1;
+	
+	if(sWatch.ucSeconds == 59){
+		sWatch.ucSeconds = 0;
+		
+		sWatch.fMinutesValueChanged = 1;
+		
+		if(sWatch.ucMinutes == 59){
+			sWatch.ucMinutes = 0;
+		}
+		else{
+			sWatch.ucMinutes++;
+		}	
+		
+	}
+	else{
+		sWatch.ucSeconds++;
+	}
+}
+

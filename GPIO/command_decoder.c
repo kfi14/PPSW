@@ -6,7 +6,7 @@
 #define NULL                                      '\0'
 #define MAX_TOKEN_NR 															3 
 #define MAX_KEYWORD_STRING_LTH 										7
-#define MAX_KEYWORD_NR 														2
+#define MAX_KEYWORD_NR 														3
 #define DELIMITER_CHARACTER 											' '
 #define MAX_TOKEN_NR 															3 
 
@@ -25,6 +25,7 @@ struct Keyword {
 struct Keyword asKeywordList[MAX_KEYWORD_NR]={
 {CLB,"callib"},
 {GT, "goto" },
+{CAL, "calc" },
 };
 
 enum State {TOKEN, DELIMITER};
