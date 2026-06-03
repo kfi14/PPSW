@@ -19,28 +19,6 @@ int main() {
 	while(1) {
 			if(Transmiter_GetStatus() == FREE) {
 				
-				if(sWatch.fSecondsValueChanged == 1){
-			
-					CopyString("sec ",cTransmitString);
-					AppendUIntToString(sWatch.ucSeconds,cTransmitString);	
-					
-					Transmiter_SendString(cTransmitString);
-					
-					sWatch.fSecondsValueChanged = 0;
-				}
-				
-				if(sWatch.fMinutesValueChanged == 1){
-					
-					CopyString("sec ",cTransmitString);
-					AppendUIntToString(sWatch.ucSeconds,cTransmitString);				
-					AppendString(" min ",cTransmitString);			
-					AppendUIntToString(sWatch.ucMinutes,cTransmitString);
-					
-					Transmiter_SendString(cTransmitString);
-					cTransmitString[0] = 0;
-					sWatch.fMinutesValueChanged = 0;
-				}
-				
 				if(eReciever_GetStatus() == READY){
 					
 					Reciever_GetStringCopy(cDestination);
@@ -53,6 +31,28 @@ int main() {
 							Transmiter_SendString(cTransmitString);
 						}
 					}
+				}
+				
+				else if(sWatch.fSecondsValueChanged == 1){
+			
+					CopyString("sec ",cTransmitString);
+					AppendUIntToString(sWatch.ucSeconds,cTransmitString);	
+					
+					Transmiter_SendString(cTransmitString);
+					
+					sWatch.fSecondsValueChanged = 0;
+				}
+				
+				else if(sWatch.fMinutesValueChanged == 1){
+					
+					CopyString("sec ",cTransmitString);
+					AppendUIntToString(sWatch.ucSeconds,cTransmitString);				
+					AppendString(" min ",cTransmitString);			
+					AppendUIntToString(sWatch.ucMinutes,cTransmitString);
+					
+					Transmiter_SendString(cTransmitString);
+					cTransmitString[0] = 0;
+					sWatch.fMinutesValueChanged = 0;
 				}		
 		}
 	}
