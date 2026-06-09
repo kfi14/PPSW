@@ -6,17 +6,21 @@
 #include "string.h"
 #include "command_decoder.h"
 #include <LPC21xx.H>
-
+#include "adc.h"
 
 
 int main() {
   char cTransmitString[30];
 	char cDestination[30];
+	extern unsigned int uiVoltage;
 
 	UART_InitWithInt(9600);
 	Timer0InterruptsInit(500000,&WatchUpdate);
+	AdcInit();
+	ServoInit(50);
 	
 	while(1) {
+		
 			if(Transmiter_GetStatus() == FREE) {
 				
 				if(eReciever_GetStatus() == READY){
@@ -54,6 +58,7 @@ int main() {
 					cTransmitString[0] = 0;
 					sWatch.fMinutesValueChanged = 0;
 				}		
-		}
+		}	
+		ServoGoTo(uiVoltage*48/1023);
 	}
 }

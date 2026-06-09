@@ -23,7 +23,7 @@ I (C:\Users\kubaficer\PPSW\GPIO\servo.h)(0x6A1449EE)
 I (C:\Users\kubaficer\PPSW\GPIO\led.h)(0x6A1449EE)
 I (C:\Users\kubaficer\PPSW\GPIO\timer_interrupts.h)(0x6A202866)
 F (.\servo.h)(0x6A1449EE)()
-F (.\main.c)(0x6A203A84)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+F (.\main.c)(0x6A203D44)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I D:\Keil\ARM\RV31\INC-I D:\Keil\ARM\CMSIS\Include-I D:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
 I (C:\Users\kubaficer\PPSW\GPIO\led.h)(0x6A1449EE)
 I (C:\Users\kubaficer\PPSW\GPIO\timer_interrupts.h)(0x6A202866)
 I (C:\Users\kubaficer\PPSW\GPIO\keyboard.h)(0x69E10B87)
@@ -41,3 +41,5 @@ I (C:\Users\kubaficer\PPSW\GPIO\command_decoder.h)(0x6A203A7F)
 I (C:\Users\kubaficer\PPSW\GPIO\string.h)(0x6A2030F0)
 F (.\command_decoder.h)(0x6A203A7F)()
 F (.\string.h)(0x6A2030F0)()
+F (.\adc.c)(0x6A2876BA)()
+F (.\adc.h)(0x6A2876C4)()
