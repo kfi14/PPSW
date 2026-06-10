@@ -8,7 +8,7 @@
 #include <LPC21xx.H>
 #include "adc.h"
 
-
+//git test
 int main() {
   char cTransmitString[30];
 	char cDestination[30];
